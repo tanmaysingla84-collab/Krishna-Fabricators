@@ -132,8 +132,8 @@ ul {
 
 /* Better Responsiveness */
 @media (max-width: 900px) {
-  .nav-links { display: none; }
-  .navbar .btn { display: none; } /* Free up horizontal header space */
+  .nav-links { display: flex; gap: 20px; margin-left: 20px; margin-right: 20px; align-items:center; }
+  .navbar .btn { display: inline-flex; white-space: nowrap; }
   .about-snippet, .why-grid, .split-layout, .service-row, .contact-wrapper, .quote-container {
     grid-template-columns: 1fr;
     flex-direction: column;
@@ -147,15 +147,32 @@ ul {
   .stat-item h3 { font-size: 2rem !important; }
   .services-grid, .gallery-grid, .stats-grid, .process-grid { grid-template-columns: 1fr; }
   .hero-card { display: none; }
-  .footer-content { grid-template-columns: 1fr; gap: 30px; }
+  /* Swipeable Footer */
+  .footer-content { 
+    display: flex; 
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; 
+    scroll-snap-type: x mandatory; 
+    gap: 30px; 
+    padding-bottom: 20px;
+  }
+  .footer-content::-webkit-scrollbar { display: none; }
+  .footer-content > div {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+  }
   .page-hero { padding-top: 100px; height: 40vh; }
   
-  /* Make header look like services page solid block on mobile */
+  /* Make header swipeable block on mobile */
   .navbar {
     background: rgba(13, 13, 13, 0.95) !important;
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255,255,255,0.05);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
   }
+  .navbar::-webkit-scrollbar { display: none; }
   
   /* Standardize header sizes and footer formatting to match services */
   .hero { height: auto !important; min-height: 60vh; padding: 120px 0 60px 0; }
