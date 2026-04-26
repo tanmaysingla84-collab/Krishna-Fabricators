@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://sitemaps.org">
   <url>
-    <loc>https://vercel.app</loc>
+    <loc>https://krishnafabricators.vercel.app</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://vercel.appabout.html</loc>
+    <loc>https://krishnafabricators.vercel.app/about.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vercel.appservices.html</loc>
+    <loc>https://krishnafabricators.vercel.app/services.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vercel.appprojects.html</loc>
+    <loc>https://krishnafabricators.vercel.app/projects.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vercel.appcontact.html</loc>
+    <loc>https://krishnafabricators.vercel.app/contact.html</loc>
     <priority>0.8</priority>
   </url>
 </urlset>
