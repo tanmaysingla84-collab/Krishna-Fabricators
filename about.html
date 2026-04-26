@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Krishna Fabricators</title>
+  <link rel="stylesheet" href="./assets/styles/index.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <style>
+    /* About Page Specific Styles */
+    .page-hero {
+      height: 60vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-top: 80px;
+    }
+    .page-hero-bg {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      opacity: 0.4;
+    }
+    .page-hero-content {
+      position: relative;
+      z-index: 10;
+      color: var(--color-background);
+    }
+    .page-hero-content h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+    .content-section {
+      padding: var(--section-padding);
+    }
+    .split-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .team-img {
+      width: 100%;
+      height: 500px;
+      border: 5px solid var(--color-secondary);
+      border-radius: var(--radius-md);
+    }
+  </style>
+</head>
+<body>
+  <div class="custom-cursor"></div>
+
+  <nav class="navbar scrolled">
+    <a href="index.html" class="logo-container hover-target" style="display:flex; flex-direction:column; align-items:flex-start;">
+      <span class="logo-main" style="color:var(--color-secondary); font-size:1.8rem; font-weight:700; letter-spacing:1px; line-height:0.9;">KRISHNA</span>
+      <span class="logo-sub" style="color:#fff; font-size:0.75rem; letter-spacing:2px; margin-top:-6px;">FABRICATORS</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">HOME</a></li>
+      <li><a href="about.html" class="nav-link active">ABOUT</a></li>
+      <li><a href="services.html" class="nav-link">SERVICES</a></li>
+      <li><a href="projects.html" class="nav-link">PORTFOLIO</a></li>
+      <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+    </ul>
+    <a href="quote.html" class="btn btn-outline hover-target">GET A QUOTE</a>
+  </nav>
+
+  <header class="page-hero section-dark">
+    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1920&auto=format&fit=crop" class="page-hero-bg parallax" data-speed="0.3" alt="Fabrication workshop">
+    <div class="page-hero-content text-reveal">
+      <h1>Our Story. Our Craft.<br><span class="text-gold">Our Legacy.</span></h1>
+    </div>
+  </header>
+
+  <section class="content-section fade-up">
+    <div class="container split-layout">
+      <div>
+        <h2 class="text-gold" style="font-size: 2.5rem; margin-bottom: 20px;">The Foundation of Excellence</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 15px;">Established in 2009, Krishna Fabricators began with a singular vision: to revolutionize the standard of exterior architecture in India. What started as a small aluminium fabrication unit has grown into an industry-leading powerhouse of structural engineering.</p>
+        <p style="font-size: 1.1rem;">Today, we operate a massive state-of-the-art facility equipped with precision CNC machinery, catering to corporate giants, 5-star hospitality brands, and luxury real estate developers nationwide.</p>
+      </div>
+      <div>
+        <img src="https://images.unsplash.com/photo-1565506041692-a1f94539825b?q=80&w=800&auto=format&fit=crop" style="border-radius: var(--radius-md)" alt="Precision Metalwork">
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section-dark fade-up" style="position:relative">
+    <div style="position: absolute; top:0; left:0; width:100%; height:100%; background:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab') no-repeat center/cover; opacity:0.05; z-index:0;"></div>
+    <div class="container" style="position:relative; z-index:1;">
+      <div style="text-align:center; margin-bottom: 60px;">
+        <h2 class="text-gold" style="font-size: 3rem;">Vision & Mission</h2>
+      </div>
+      <div class="split-layout">
+        <div class="glass-card stagger-item">
+          <i data-feather="eye" style="color:var(--color-secondary); width:50px; height:50px; margin-bottom:20px;"></i>
+          <h3 style="font-size:1.8rem; margin-bottom:15px; font-family:var(--font-headline)">Our Vision</h3>
+          <p>To be the undisputed leader in architectural fabrication in Asia, setting global benchmarks for structural integrity, aesthetic brilliance, and sustainable engineering.</p>
+        </div>
+        <div class="glass-card stagger-item">
+          <i data-feather="target" style="color:var(--color-secondary); width:50px; height:50px; margin-bottom:20px;"></i>
+          <h3 style="font-size:1.8rem; margin-bottom:15px; font-family:var(--font-headline)">Our Mission</h3>
+          <p>To deliver uncompromising quality on every project, treating every facade as our masterpiece. We commit to technological advancement and absolute client transparency.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section fade-up">
+    <div class="container">
+      <div class="split-layout">
+        <div>
+          <img src="https://images.unsplash.com/photo-1541888081600-84307a516e87?q=80&w=800&auto=format&fit=crop" class="team-img" alt="Construction Team">
+        </div>
+        <div>
+          <h2 style="font-size: 2.5rem; margin-bottom: 20px;">The Minds Behind The Metal</h2>
+          <p style="font-size: 1.1rem; margin-bottom: 20px;">Our dedicated team of architects, structural CAD engineers, and on-site foremen bring decades of cumulative experience to the drawing board.</p>
+          <ul style="list-style: none;">
+            <li style="margin-bottom: 10px;"><i data-feather="check" class="text-gold"></i> 50+ In-house Engineers</li>
+            <li style="margin-bottom: 10px;"><i data-feather="check" class="text-gold"></i> 200+ Skilled Installers</li>
+            <li style="margin-bottom: 10px;"><i data-feather="check" class="text-gold"></i> Certified Quality Auditors</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer placeholder (Same as index) -->
+  <footer>
+    <div class="footer-top-line"></div>
+    <div class="container footer-content">
+      <div>
+        <div class="logo-container" style="margin-bottom:20px; display:flex; flex-direction:column; align-items:flex-start;">
+          <span class="logo-main" style="color:var(--color-secondary); font-size:1.8rem; font-weight:700; letter-spacing:1px; line-height:0.9;">KRISHNA</span>
+          <span class="logo-sub" style="color:#fff; font-size:0.75rem; letter-spacing:2px; margin-top:-6px;">FABRICATORS</span>
+        </div>
+        <p style="margin-bottom:20px; max-width:80%;">Engineering facades and building legacies for the modern era.</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div>&copy; 2026 Krishna Fabricators. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+  <script type="module" src="/assets/js/main.js"></script>
+  <script>feather.replace();</script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects Portfolio | Krishna Fabricators</title>
+  <link rel="stylesheet" href="./assets/styles/index.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <style>
+    .page-hero { height: 50vh; position: relative; display: flex; align-items: center; justify-content: center; text-align: center;}
+    .page-hero-bg { position: absolute; top:0; left:0; width:100%; height:100%; object-fit: cover; opacity: 0.4; }
+    
+    .filter-tabs { display:flex; justify-content:center; gap:15px; margin: 60px 0 40px; flex-wrap: wrap; }
+    .filter-tab { padding: 10px 24px; background: transparent; border: 1px solid var(--color-primary); border-radius: var(--radius-pill); font-family: var(--font-subheading); cursor:none; transition: var(--transition-smooth); }
+    .filter-tab.active, .filter-tab:hover { background: var(--color-primary); color: var(--color-background); }
+    
+    .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 20px; padding: 0 5% 100px; }
+    .portfolio-item { position: relative; height: 350px; border-radius: var(--radius-md); overflow: hidden; cursor: none; }
+    .portfolio-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+    .portfolio-overlay { position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.7); display:flex; flex-direction:column; justify-content:center; align-items:center; opacity:0; transition: var(--transition-smooth); text-align:center; padding:20px; color:white; }
+    .portfolio-item:hover .portfolio-overlay { opacity: 1; }
+    .portfolio-item:hover img { transform: scale(1.1); }
+    .portfolio-overlay i { width: 40px; height:40px; color:var(--color-secondary); margin-bottom:15px;}
+    
+    /* Lightbox */
+    .lightbox { position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(13,13,13,0.98); z-index:10000; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity 0.4s ease; padding: 40px;}
+    .lightbox.active { opacity:1; pointer-events:all; }
+    .lightbox-img { max-height:80vh; max-width:80%; border:2px solid var(--color-secondary); box-shadow: 0 20px 60px rgba(0,0,0,0.8); }
+    .lightbox-close { position:absolute; top:40px; right:40px; color:var(--color-secondary); cursor:none; }
+    .lightbox-details { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); text-align:center; color:white; }
+  </style>
+</head>
+<body>
+  <div class="custom-cursor"></div>
+  <nav class="navbar scrolled">
+    <a href="index.html" class="logo-container hover-target" style="display:flex; flex-direction:column; align-items:flex-start;">
+      <span class="logo-main" style="color:var(--color-secondary); font-size:1.8rem; font-weight:700; letter-spacing:1px; line-height:0.9;">KRISHNA</span>
+      <span class="logo-sub" style="color:#fff; font-size:0.75rem; letter-spacing:2px; margin-top:-6px;">FABRICATORS</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">HOME</a></li>
+      <li><a href="about.html" class="nav-link">ABOUT</a></li>
+      <li><a href="services.html" class="nav-link">SERVICES</a></li>
+      <li><a href="projects.html" class="nav-link active">PORTFOLIO</a></li>
+      <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+    </ul>
+    <a href="quote.html" class="btn btn-outline hover-target">GET A QUOTE</a>
+  </nav>
+
+  <header class="page-hero section-dark">
+    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920&auto=format&fit=crop" class="page-hero-bg parallax" data-speed="0.2">
+    <div style="position:relative; z-index:10; color:white;" class="text-reveal">
+      <h1 style="font-size:3.5rem;">Our Portfolio of <span class="text-gold">Excellence</span></h1>
+    </div>
+  </header>
+
+  <div class="filter-tabs stagger-container">
+    <button class="filter-tab active hover-target stagger-item">All Projects</button>
+    <button class="filter-tab hover-target stagger-item">ACP Cladding</button>
+    <button class="filter-tab hover-target stagger-item">Glass Facades</button>
+    <button class="filter-tab hover-target stagger-item">Aluminium Fronts</button>
+  </div>
+
+  <div class="portfolio-grid stagger-container" id="galleryGrid">
+    <div class="portfolio-item hover-target stagger-item" onclick="openLightbox(this)">
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop">
+      <div class="portfolio-overlay">
+        <i data-feather="zoom-in"></i>
+        <h3>Glass Curtain Wall</h3><p>Gurugram, India</p>
+      </div>
+    </div>
+    <div class="portfolio-item hover-target stagger-item" onclick="openLightbox(this)">
+      <img src="https://images.unsplash.com/photo-1506526645398-fe9dfa6d6537?q=80&w=800&auto=format&fit=crop">
+      <div class="portfolio-overlay">
+        <i data-feather="zoom-in"></i>
+        <h3>Aluminium Louvers</h3><p>Hisar, India</p>
+      </div>
+    </div>
+    <div class="portfolio-item hover-target stagger-item" onclick="openLightbox(this)">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop">
+      <div class="portfolio-overlay">
+        <i data-feather="zoom-in"></i>
+        <h3>Luxury Apartments HPL</h3><p>Delhi NCR</p>
+      </div>
+    </div>
+    <!-- Adding a few more to make a grid -->
+    <div class="portfolio-item hover-target stagger-item" onclick="openLightbox(this)">
+      <img src="https://images.unsplash.com/photo-1518398046578-8ca57deebd64?q=80&w=800&auto=format&fit=crop">
+      <div class="portfolio-overlay">
+        <i data-feather="zoom-in"></i>
+        <h3>Commercial Mall ACP</h3><p>Chandigarh</p>
+      </div>
+    </div>
+    <div class="portfolio-item hover-target stagger-item" onclick="openLightbox(this)">
+      <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=800&auto=format&fit=crop">
+      <div class="portfolio-overlay">
+        <i data-feather="zoom-in"></i>
+        <h3>Hotel Elevation</h3><p>Amritsar</p>
+      </div>
+    </div>
+    <div class="portfolio-item hover-target stagger-item" onclick="openLightbox(this)">
+      <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=800&auto=format&fit=crop">
+      <div class="portfolio-overlay">
+        <i data-feather="zoom-in"></i>
+        <h3>ACP Structure Refit</h3><p>Panipat</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-close hover-target" onclick="closeLightbox()"><i data-feather="x" style="width:40px; height:40px;"></i></div>
+    <img src="" class="lightbox-img" id="lightboxImg">
+    <div class="lightbox-details">
+      <h2 id="lightboxTitle" class="text-gold"></h2>
+      <p id="lightboxSubtitle" style="font-size:1.1rem;"></p>
+    </div>
+  </div>
+
+  <script type="module" src="/assets/js/main.js"></script>
+  <script>
+    feather.replace();
+    
+    function openLightbox(element) {
+      const img = element.querySelector('img').src;
+      const title = element.querySelector('h3').innerText;
+      const subtitle = element.querySelector('p').innerText;
+      
+      document.getElementById('lightboxImg').src = img;
+      document.getElementById('lightboxTitle').innerText = title;
+      document.getElementById('lightboxSubtitle').innerText = subtitle;
+      document.getElementById('lightbox').classList.add('active');
+    }
+    
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+  </script>
+</body>
+</html>

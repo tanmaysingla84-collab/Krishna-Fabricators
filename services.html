@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Services | Complete Fabrication Solutions | Krishna Fabricators</title>
+  <link rel="stylesheet" href="./assets/styles/index.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <style>
+    .page-hero { height: 60vh; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 80px; }
+    .page-hero-bg { position: absolute; top:0; left:0; width:100%; height:100%; object-fit: cover; opacity: 0.4; }
+    .service-row { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; padding: 100px 5%; border-bottom: 1px solid rgba(0,0,0,0.05); }
+    .service-row.reverse { direction: rtl; }
+    .service-row.reverse > * { direction: ltr; }
+    .service-img { width: 100%; height: 500px; border-radius: 8px; border-left: 5px solid var(--color-secondary); }
+    .service-row.reverse .service-img { border-left: none; border-right: 5px solid var(--color-secondary); }
+    .service-content h2 { font-size: 2.5rem; margin-bottom: 20px; }
+    .service-content p { font-size: 1.1rem; color: #555; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <div class="custom-cursor"></div>
+  <nav class="navbar scrolled">
+    <a href="index.html" class="logo-container hover-target" style="display:flex; flex-direction:column; align-items:flex-start;">
+      <span class="logo-main" style="color:var(--color-secondary); font-size:1.8rem; font-weight:700; letter-spacing:1px; line-height:0.9;">KRISHNA</span>
+      <span class="logo-sub" style="color:#fff; font-size:0.75rem; letter-spacing:2px; margin-top:-6px;">FABRICATORS</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">HOME</a></li>
+      <li><a href="about.html" class="nav-link">ABOUT</a></li>
+      <li><a href="services.html" class="nav-link active">SERVICES</a></li>
+      <li><a href="projects.html" class="nav-link">PORTFOLIO</a></li>
+      <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+    </ul>
+    <a href="quote.html" class="btn btn-outline hover-target">GET A QUOTE</a>
+  </nav>
+
+  <header class="page-hero section-dark">
+    <img src="https://plus.unsplash.com/premium_photo-1678738318288-7e471f907661?q=80&w=1920&auto=format&fit=crop" class="page-hero-bg parallax" data-speed="0.3" alt="Glass Panels">
+    <div style="position:relative; z-index:10; color:white; padding:0 20px;" class="text-reveal">
+      <h1 style="font-size:3.5rem;">Complete Fabrication &<br><span class="text-gold">Exterior Solutions</span></h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="service-row fade-up">
+      <img src="https://images.pexels.com/photos/162540/architecture-building-glass-city-162540.jpeg?auto=compress&cs=tinysrgb&w=800" class="service-img" alt="ACP Fabrication">
+      <div class="service-content">
+        <h2>ACP Fabrication & Cladding</h2>
+        <p>Aluminium Composite Panels provide sleek, durable, and weather-resistant finishing to modern structures. We specialize in precision routing and flawless joint integration.</p>
+        <a href="quote.html" class="btn btn-outline hover-target" style="color:var(--color-primary); border-color:var(--color-primary)">Get Quote <i data-feather="arrow-right" style="margin-left:8px"></i></a>
+      </div>
+    </section>
+
+    <section class="service-row reverse section-dark fade-up" style="background:#111">
+      <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800" class="service-img" alt="Glass Fabrication">
+      <div class="service-content" style="color:white">
+        <h2 class="text-gold">Structural Glass Facades</h2>
+        <p style="color:#aaa">From elegant frameless curtain walls to robust spider glazing, our glass systems provide maximum acoustic insulation, UV protection, and aesthetic brilliance.</p>
+        <a href="quote.html" class="btn btn-primary hover-target">Get Quote <i data-feather="arrow-right" style="margin-left:8px"></i></a>
+      </div>
+    </section>
+
+    <section class="service-row fade-up">
+      <img src="https://images.pexels.com/photos/164336/pexels-photo-164336.jpeg?auto=compress&cs=tinysrgb&w=800" class="service-img" alt="Aluminium Windows">
+      <div class="service-content">
+        <h2>Premium Aluminium Works</h2>
+        <p>Custom-extruded aluminium frames, heavy-duty doors, and commercial window systems designed to withstand extreme wind loads without compromising elegant sightlines.</p>
+      </div>
+    </section>
+
+    <section class="service-row reverse section-dark fade-up" style="background:#111">
+      <img src="https://images.pexels.com/photos/1106476/pexels-photo-1106476.jpeg?auto=compress&cs=tinysrgb&w=800" class="service-img" alt="Louvers">
+      <div class="service-content" style="color:white">
+        <h2 class="text-gold">Architectural Louvers</h2>
+        <p style="color:#aaa">Highly engineered sun-shading louver systems that control climate efficiently while adding a modern industrial texture to the building's exterior profile.</p>
+      </div>
+    </section>
+
+    <section class="service-row fade-up">
+      <img src="https://images.pexels.com/photos/827518/pexels-photo-827518.jpeg?auto=compress&cs=tinysrgb&w=800" class="service-img" alt="HPL Panels">
+      <div class="service-content">
+        <h2>HPL Cladding</h2>
+        <p>High Pressure Laminates in luxurious wood, concrete, and metallic textures. UV-resistant and exceptionally durable for premium residential and commercial cladding.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-top-line"></div>
+    <div class="container footer-content">
+      <div>
+        <div class="logo-container" style="margin-bottom:20px; display:flex; flex-direction:column; align-items:flex-start;">
+          <span class="logo-main" style="color:var(--color-secondary); font-size:1.8rem; font-weight:700; letter-spacing:1px; line-height:0.9;">KRISHNA</span>
+          <span class="logo-sub" style="color:#fff; font-size:0.75rem; letter-spacing:2px; margin-top:-6px;">FABRICATORS</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/assets/js/main.js"></script>
+  <script>feather.replace();</script>
+</body>
+</html>
